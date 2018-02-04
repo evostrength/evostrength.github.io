@@ -76,10 +76,12 @@
       });
     }();
     drift.SNIPPET_VERSION = '0.3.1';
-    drift.config({
-      enableWelcomeMessage: true,
-      welcomeMessageDelay: 10000,
-    });
+    drift.on('ready',function(api, payload) {
+       drift.config({
+          enableWelcomeMessage: true,
+          welcomeMessageDelay: 10000,
+          })
+    })
     drift.load('vezzcrv99hb7');
     </script>
     <!-- End of Async Drift Code -->
