@@ -21,8 +21,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
   margin: 0 0 35px;
   letter-spacing: 1px;
   text-transform: uppercase; }
@@ -47,7 +47,7 @@ a {
     color: #1d9b6c; }
 
 #mainNav {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin-bottom: 0;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -58,7 +58,7 @@ a {
     color: white;
     border: 1px solid white; }
   #mainNav .navbar-brand {
-    font-weight: 700; }
+    font-weight: 400; }
   #mainNav a {
     color: white; }
   #mainNav .navbar-nav .nav-item {
