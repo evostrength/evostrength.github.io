@@ -265,10 +265,13 @@
           zoom: 15,
           center: location
         });
+	var icon = {
+          url: 'Map Marker.png', // url
+          scaledSize: new google.maps.Size(50, 50), // size
+    	};
         var marker = new google.maps.Marker({
           position: location,
-	  icon:'Map Marker.png',
-          scaledSize: new google.maps.Size(50, 50),
+	  icon: icon,
           map: map,
 	  animation: google.maps.Animation.BOUNCE,
           title: 'Evo Strength + Fitness'
