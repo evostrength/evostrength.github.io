@@ -261,9 +261,10 @@
     <script>
       function initMap() {
         var location = {lat: 10.738645, lng: 106.729243};
+	var mCenter = {lat: 10.751670, lng: 106.703634};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
-          center: location
+          center: mCenter
         });
 	var icon = {
           url: 'Map Marker.png', // url
