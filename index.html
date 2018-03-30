@@ -301,7 +301,7 @@
      			directionsDisplay.setMap(map);
      			directionsDisplay.setPanel(document.getElementById('panel'));
      			var request = {
-       				origin: clientCoords,
+       				origin: {lat: 10.718645, lng: 106.759243},
        				destination: busAddr,
        				travelMode: google.maps.DirectionsTravelMode.DRIVING
      			};
