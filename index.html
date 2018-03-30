@@ -305,6 +305,17 @@
        				destination: busAddr,
        				travelMode: google.maps.DirectionsTravelMode.DRIVING
      			};
+			var icon = {
+          			url: 'Map Marker.png', // url
+          			scaledSize: new google.maps.Size(30, 50), // size W x H
+			};
+        		var marker = new google.maps.Marker({
+          			position: busAddr,
+          			icon: icon,
+          			map: map,
+	  			animation: google.maps.Animation.BOUNCE,
+          			title: 'Evo Strength + Fitness'
+        	});
      			directionsService.route(request, function (response, status) {
 			if (status == google.maps.DirectionsStatus.OK) {
          			directionsDisplay.setDirections(response);
