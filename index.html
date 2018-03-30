@@ -301,9 +301,9 @@
      			directionsDisplay.setMap(map);
      			directionsDisplay.setPanel(document.getElementById('panel'));
      			var request = {
-       				origin: {lat: 10.758645, lng: 106.689243},
+       				origin: clientCoords,
        				destination: busAddr,
-       				travelMode: google.maps.DirectionsTravelMode.DRIVING
+       				travelMode: google.maps.DirectionsTravelMode.bicycling
      			};
 			var icon = {
           			url: 'Map Marker.png', // url
