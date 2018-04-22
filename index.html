@@ -421,6 +421,11 @@
           			url: 'Map Marker.png', // url
           			scaledSize: new google.maps.Size(30, 50), // size W x H
 			};
+			var marker = new google.maps.Marker({
+          			position: clientCoords,
+          			map: map,
+          			title: 'Your Location'
+        	});
         		var marker = new google.maps.Marker({
           			position: busAddr,
           			icon: icon,
