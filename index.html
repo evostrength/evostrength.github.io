@@ -494,32 +494,32 @@
         accessToken: 'z9TF8aNDAw3lwjT1Ki_tSZ93394NOmIVdjNSh1Br_aU'
       })
 
-      const getEntry = client.getEntry('IN2oVDGCOEh7shZSccbHG')
-      .then((entry) => {
-        console.log(entry.fields.userCount)
+      function getEntry() {
+        client.getEntry('IN2oVDGCOEh7shZSccbHG')
+        .then((entry) => {
+          console.log(entry.fields.userCount)
 
-        const pre = document.getElementById("busy")
-        
-        if (entry.fields.userCount === 0) {
-          pre.innerHTML = "No one is here."
-        } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
-          pre.innerHTML = "We're not so busy."
-        } else if (entry.fields.userCount >=5 && entry.fields.userCount < 8) {
-          pre.innerHTML = "We're fairly busy."
-        } else if (entry.fields.userCount >=8 && entry.fields.userCount < 12) {
-          pre.innerHTML = "The gym is busy."
-        } else if (entry.fields.userCount >=12) {
-          pre.innerHTML = "Don't come now...there's no more room."
-        }
+          const pre = document.getElementById("busy")
+          
+          if (entry.fields.userCount === 0) {
+            pre.innerHTML = "No one is here."
+          } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
+            pre.innerHTML = "We're not so busy."
+          } else if (entry.fields.userCount >=5 && entry.fields.userCount < 8) {
+            pre.innerHTML = "We're fairly busy."
+          } else if (entry.fields.userCount >=8 && entry.fields.userCount < 12) {
+            pre.innerHTML = "The gym is busy."
+          } else if (entry.fields.userCount >=12) {
+            pre.innerHTML = "Don't come now...there's no more room."
+          }
 
-        console.log("I just ran")
+          console.log("I just ran")
 
-      })
-      .catch(console.error)
+        })
+        .catch(console.error)
+      }
 
-      setInterval(function() {
-        getEntry
-        }, 5000)
+      setInterval(getEntry, 5000)
 
 
     </script>
