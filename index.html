@@ -500,8 +500,13 @@
           // console.log(entry.fields.userCount)
 
           const pre = document.getElementById("busy")
+
+          const utcHour = new Date().getUTCHours()
+          console.log(utcHour)
           
-          if (entry.fields.userCount === 0) {
+          if (utcHour < 1 || utcHour > 14) {
+            pre.innerHTML = "No one is here...because we're closed"
+          } else if (entry.fields.userCount === 0) {
             pre.innerHTML = "No one is here."
           } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
             pre.innerHTML = "We're not so busy."
