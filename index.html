@@ -45,8 +45,8 @@
 
     <!-- Custom fonts for this template ========================================= -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600|Roboto:300,400&amp;subset=vietnamese" rel="stylesheet" type="text/css">
 
     <!-- Contentful SDK -->
@@ -497,7 +497,7 @@
       function getEntry() {
         client.getEntry('IN2oVDGCOEh7shZSccbHG')
         .then((entry) => {
-          console.log(entry.fields.userCount)
+          // console.log(entry.fields.userCount)
 
           const pre = document.getElementById("busy")
           
@@ -513,13 +513,12 @@
             pre.innerHTML = "Don't come now...there's no more room."
           }
 
-          console.log("I just ran")
-
         })
         .catch(console.error)
       }
 
-      setInterval(getEntry, 5000)
+      getEntry()
+      setInterval(getEntry, 10000)
 
 
     </script>
