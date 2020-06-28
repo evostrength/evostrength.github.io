@@ -234,6 +234,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="vn">Tiếng Việt</a>
             </li>
+            <li id="busy">
+              test
+            </li>
           </ul>
         </div>
       </div>
@@ -495,8 +498,14 @@
       })
 
       client.getEntry('IN2oVDGCOEh7shZSccbHG')
-      .then((entry) => console.log(entry))
+      .then((entry) => {
+        console.log(entry.fields.userCount)
+
+
+      })
       .catch(console.error)
+
+
     </script>
        
   </body>
