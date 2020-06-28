@@ -504,9 +504,7 @@
           
           if (utcHour < 1 || utcHour >= 14) {
             pre.innerHTML = "No one is here...because we're closed."
-          } else if (entry.fields.userCount === 0) {
-            pre.innerHTML = "No one is here."
-          } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
+          } else if (entry.fields.userCount < 5) {
             pre.innerHTML = "We're not so busy."
           } else if (entry.fields.userCount >=5 && entry.fields.userCount < 9) {
             pre.innerHTML = "We're somewhat busy."
