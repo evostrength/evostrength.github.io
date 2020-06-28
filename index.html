@@ -503,7 +503,7 @@
           const utcHour = new Date().getUTCHours()
           
           if (utcHour < 1 || utcHour >= 14) {
-            pre.innerHTML = "No one is here...because we're closed"
+            pre.innerHTML = "No one is here...because we're closed."
           } else if (entry.fields.userCount === 0) {
             pre.innerHTML = "No one is here."
           } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
@@ -515,7 +515,6 @@
           } else if (entry.fields.userCount >=12) {
             pre.innerHTML = "Don't come now...there's no more room."
           }
-
         })
         .catch(console.error)
       }
