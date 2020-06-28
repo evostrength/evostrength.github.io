@@ -469,8 +469,8 @@
     <!-- Footer ========================================= -->
     <footer>
       <div class="container text-center">
-        <p>Copyright &copy; Evo Strength + Fitness 2017-2018</p>
-        <p>Hello</p>
+        <p>Copyright &copy; Evo Strength + Fitness 2017-2018</p><br />
+        <pre></pre>
       </div>
     </footer>
 
@@ -489,19 +489,33 @@
     <script src="js/grayscale.min.js"></script>
 	  
     <script>
-
-      var client = contentful.createClient({
+      const client = contentful.createClient({
         space: 'j2w8j5ikg6sw',
         accessToken: 'z9TF8aNDAw3lwjT1Ki_tSZ93394NOmIVdjNSh1Br_aU'
       })
 
-      client.getEntry('IN2oVDGCOEh7shZSccbHG')
+      const getEntry = client.getEntry('IN2oVDGCOEh7shZSccbHG')
       .then((entry) => {
         console.log(entry.fields.userCount)
 
+        const pre = document.getElementsByTagName('pre')
+        
+        if (entry.fields.userCount === 0) {
+          pre.innerHTML = "No one is here."
+        } else if (entry.fields.userCount > 0 && entry.fields.userCount < 5) {
+          pre.innerHTML = "We're not so busy."
+        } else if (entry.fields.userCount >=5 && entry.fields.userCount < 8) {
+          pre.innerHTML = "We're fairly busy."
+        } else if (entry.fields.userCount >=8 && entry.fields.userCount < 12) {
+          pre.innerHTML = "The gym is busy."
+        } else if (entry.fields.userCount >=12) {
+          pre.innerHTML = "Don't come now...there's no more room."
+        }
 
       })
       .catch(console.error)
+
+      setInterval(getEntry, 10000)
 
 
     </script>
