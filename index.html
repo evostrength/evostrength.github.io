@@ -51,20 +51,6 @@
 
     <!-- Contentful SDK -->
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-    <script>
-      var contentful = require('contentful')
-
-      var client = contentful.createClient({
-        space: 'j2w8j5ikg6sw',
-        accessToken: 'z9TF8aNDAw3lwjT1Ki_tSZ93394NOmIVdjNSh1Br_aU'
-      })
-
-      client.getEntry('IN2oVDGCOEh7shZSccbHG')
-      .then(function (entry) {
-        // logs the entry metadata
-        console.log(entry)
-      })
-    </script>
 
     <!-- Custom styles for this template ========================================= -->
     <link href="css/grayscale.min.css" rel="stylesheet">
@@ -500,6 +486,19 @@
     
     <!-- Custom scripts ========================================= -->
     <script src="js/grayscale.min.js"></script>
+	  
+    <script>
+      var contentful = require('contentful')
+
+      var client = contentful.createClient({
+        space: 'j2w8j5ikg6sw',
+        accessToken: 'z9TF8aNDAw3lwjT1Ki_tSZ93394NOmIVdjNSh1Br_aU'
+      })
+
+      client.getEntry('IN2oVDGCOEh7shZSccbHG')
+      .then((entry) => console.log(entry))
+      .catch(console.error)
+    </script>
        
   </body>
 
